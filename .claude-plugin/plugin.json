@@ -1,0 +1,23 @@
+{
+  "name": "hotel-team-skills",
+  "version": "1.0.0",
+  "description": "8 free Claude skills for independent & small-chain hotel teams — General Manager, Front Office, Revenue Management, Finance & Controller, Food & Beverage, Housekeeping & Rooms, Sales & Marketing, and a Vibe Coder (web/site builder).",
+  "author": {
+    "name": "MSG2AI",
+    "email": "bart@msg2ai.xyz",
+    "url": "https://msg2ai.xyz"
+  },
+  "homepage": "https://github.com/msg2ai/hotel-team-skills",
+  "repository": "https://github.com/msg2ai/hotel-team-skills",
+  "license": "MIT",
+  "keywords": [
+    "hotel",
+    "hospitality",
+    "independent-hotel",
+    "revenue-management",
+    "front-office",
+    "usali",
+    "claude-skills"
+  ],
+  "skills": "./"
+}

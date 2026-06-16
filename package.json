@@ -1,0 +1,50 @@
+{
+  "name": "hotel-team-skills",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.0",
+  "description": "8 free Claude skills for independent & small-chain hotel teams — one AI seat for every role in your hotel, plus a Vibe Coder to ship the direct-booking site. Built by MSG2AI.",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "hotel",
+    "hospitality",
+    "independent-hotel",
+    "revenue-management",
+    "usali",
+    "claude-skills"
+  ],
+  "homepage": "https://github.com/msg2ai/hotel-team-skills",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msg2ai/hotel-team-skills.git"
+  },
+  "author": {
+    "name": "MSG2AI",
+    "email": "bart@msg2ai.xyz",
+    "url": "https://msg2ai.xyz"
+  },
+  "license": "MIT",
+  "bin": {
+    "hotel-team-skills": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "hotel-general-manager/",
+    "hotel-front-office/",
+    "hotel-revenue-management/",
+    "hotel-finance-controller/",
+    "hotel-food-beverage/",
+    "hotel-housekeeping-rooms/",
+    "hotel-sales-marketing/",
+    "hotel-vibe-coder/",
+    ".claude-plugin/",
+    "docs/",
+    "mock/",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md"
+  ]
+}
