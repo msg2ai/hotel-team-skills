@@ -4,6 +4,8 @@
 
 Built by [MSG2AI](https://msg2ai.xyz) · AI Ambassador for hotel guests · ActionNotes for leadership meetings
 
+![Hotel Team Skills — campaign visual](./campaign-visual-hotels.png)
+
 ---
 
 ## What this is
