@@ -121,6 +121,49 @@ git clone https://github.com/msg2ai/hotel-team-skills.git ~/.claude/skills/hotel
 
 ---
 
+## Connecting integrations (optional but recommended)
+
+Every skill works on its own — but they get much more powerful when wired into the tools your hotel already uses. The `setup/` folder contains one-click scripts for each connector.
+
+### Quick setup (Claude Code)
+
+Run the setup script for any integration you want to connect:
+
+```bash
+# Set up a single integration
+bash setup/setup-gmail.sh
+
+# Set up everything interactively
+bash setup/setup-all.sh
+```
+
+### Available integrations
+
+| Integration | Setup script | What it enables | Used by |
+|---|---|---|---|
+| **Firecrawl** | `setup-firecrawl.sh` | Bootstrap the Knowledge Base from an existing hotel website; comp-set & competitor research | All skills |
+| AgentMail | `setup-agentmail.sh` | AI-native email inboxes for confirmations, group-sales outreach, invoices, notifications | All skills |
+| Gmail | `setup-gmail.sh` | Send confirmations, group replies, invoices | All skills |
+| Google Calendar | `setup-google-calendar.sh` | Arrivals/turnover milestones, schedule calls, banquet timelines | General Manager, Front Office, Sales & Marketing, Food & Beverage |
+| Google Drive | `setup-google-drive.sh` | Shared Knowledge Base host — documents, contracts, templates | All skills |
+| Zoom | `setup-zoom.sh` | Meeting recordings, virtual sales calls, brand-standard training | General Manager, Sales & Marketing, Food & Beverage |
+| Canva | `setup-canva.sh` | Social graphics, menus, signage, decks | Sales & Marketing, Food & Beverage, Vibe Coder |
+| Apollo.io | `setup-apollo.sh` | Group-sales prospect sourcing: company + contact search, enrichment (pairs with Twenty CRM) | Sales & Marketing |
+| Twenty CRM | `setup-twenty-crm.sh` | Contact/pipeline management, group & corporate account tracking | Sales & Marketing, Finance & Controller, Front Office, Food & Beverage |
+| ClickUp | `setup-clickup.sh` | Project/task management, boards, checklists | All skills |
+| Asana | `setup-asana.sh` | Project/task management (alternative to ClickUp) | All skills |
+| Vercel | `setup-vercel.sh` | Direct-booking site deployment and management | Sales & Marketing, Vibe Coder |
+| Context7 | `setup-context7.sh` | Up-to-date docs for Next.js / Vercel / Tailwind / Stripe / any library — keeps generated framework code current | Vibe Coder |
+| Obsidian | `setup-obsidian.sh` | Knowledge base, notes, institutional memory | All skills |
+
+> **Note:** You don't need all integrations. Each skill works without any connectors — integrations just make them more powerful. Pick the ones your team already uses.
+
+If you drive these skills from **OpenAI Codex** instead of Claude Code, see [`setup/CODEX.md`](./setup/CODEX.md) for the equivalent `~/.codex/config.toml` blocks for every connector above. Same OAuth flow, same tools.
+
+You can also connect these directly in **Claude.ai**: go to **Settings → Connectors** and connect Gmail, Google Calendar, Google Drive, Zoom, Canva, Vercel, Context7, or Apollo.io. These are automatically available in Claude Code when you're logged into the same account.
+
+---
+
 ## Example prompts that "just work"
 
 | When you say… | The skill that activates | What you get back |
