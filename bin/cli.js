@@ -183,6 +183,9 @@ function list() {
   console.log("  hotel-sales-marketing         Director of Sales & Marketing (Tomás)");
   console.log("  hotel-vibe-coder              Director of Digital / Vibe Coder (Noor)");
   console.log("");
+  console.log("  Your front door in ChatGPT & LLM chats:");
+  console.log("  hotel-ai-planner              AI Planner / AI guest channel (Ari)");
+  console.log("");
 
   const skillsDir = getSkillsDir();
   if (fs.existsSync(skillsDir)) {
