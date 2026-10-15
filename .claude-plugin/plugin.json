@@ -1,7 +1,7 @@
 {
   "name": "hotel-team-skills",
   "version": "1.1.0",
-  "description": "8 free Claude skills for independent & small-chain hotel teams — General Manager, Front Office, Revenue Management, Finance & Controller, Food & Beverage, Housekeeping & Rooms, Sales & Marketing, and a Vibe Coder (web/site builder).",
+  "description": "8 free Claude skills for independent & small-chain hotel teams — General Manager, Front Office, Revenue Management, Finance & Controller, Food & Beverage, Housekeeping & Rooms, Sales & Marketing, and a Vibe Coder (web/site builder) — plus the AI Planner: your hotel inside ChatGPT & LLM chats, handing guests to your WhatsApp.",
   "author": {
     "name": "MSG2AI",
     "email": "bart@msg2ai.xyz",
@@ -17,7 +17,11 @@
     "revenue-management",
     "front-office",
     "usali",
-    "claude-skills"
+    "claude-skills",
+    "chatgpt",
+    "llm",
+    "ai-concierge",
+    "whatsapp"
   ],
   "skills": "./"
 }

@@ -15,6 +15,7 @@ const SKILL_FOLDERS = [
   "hotel-housekeeping-rooms",
   "hotel-sales-marketing",
   "hotel-vibe-coder",
+  "hotel-ai-planner",
 ];
 
 function getSkillsDir() {
@@ -35,6 +36,7 @@ function printBanner() {
   console.log("");
   console.log("  Hotel Team Skills for Claude");
   console.log("  8 skills — one for every seat in your hotel, plus a Vibe Coder for the direct-booking site");
+  console.log("  + the AI Planner — your hotel inside ChatGPT & LLM chats, handing guests to your WhatsApp");
   console.log("  Built by MSG2AI — https://msg2ai.xyz");
   console.log("");
 }
@@ -73,7 +75,7 @@ function cloneRepo(targetDir) {
 function printPostInstall() {
   console.log("");
   console.log("──────────────────────────────────────────────────────────");
-  console.log("  Done! 8 hotel team skills are now installed.");
+  console.log("  Done! 8 hotel team skills + the AI Planner are now installed.");
   console.log("──────────────────────────────────────────────────────────");
   console.log("");
   console.log("  Skills:");

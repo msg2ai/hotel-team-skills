@@ -1,6 +1,6 @@
 # The Meridian Nashville — Mock Property Definition
 
-This is a fictional independent hotel used to demonstrate all 8 hotel-team skills working together. Names, addresses, and financials are illustrative.
+This is a fictional independent hotel used to demonstrate all the hotel-team skills (the 8 roles and the AI Planner) working together. Names, addresses, and financials are illustrative.
 
 ## Property Details
 
@@ -31,7 +31,7 @@ This is a fictional independent hotel used to demonstrate all 8 hotel-team skill
 | Direct Site | https://meridiannashville.com (Next.js · Vercel) |
 | Owner Portal | https://owners.meridiannashville.com (auth-gated, for Craig Whitfield / ownership) |
 
-## Leadership Team (the 8 AI seats)
+## Leadership Team (the 8 AI seats + the AI Planner)
 
 | # | Role | Skill | Person | Email |
 |---|---|---|---|---|
@@ -43,6 +43,7 @@ This is a fictional independent hotel used to demonstrate all 8 hotel-team skill
 | 06 | Director of Housekeeping / Rooms Division | `hotel-housekeeping-rooms` | Grace Mwangi | grace@meridiannashville.com |
 | 07 | Director of Sales & Marketing | `hotel-sales-marketing` | Tomás Herrera | tomas@meridiannashville.com |
 | 08 | Director of Digital / Vibe Coder | `hotel-vibe-coder` | Noor Haddad | noor@meridiannashville.com |
+| 09 | AI Planner / AI guest channel (part-time seat, sits with Sales) | `hotel-ai-planner` | Ari Navarro | ari@meridiannashville.com |
 
 Front-desk guest line: +1-615-555-0140 · concierge@meridiannashville.com (AI Ambassador SMS+WhatsApp guest concierge at +1-615-555-0188).
 
@@ -111,6 +112,7 @@ The Meridian competes in a 5-property Nashville upscale set (the other 4 are ano
 | Finance | September USALI P&L close (due 10th business day); **asset-manager quarterly review Oct 1**; OTA reconciliations | David |
 | GM | Asset-manager quarterly briefing prep; risk register; 2027 budget kickoff | Elena |
 | Web | Weddings package landing page; owner-portal KPI tiles wiring; /offers refresh | Noor |
+| AI channel | AI visibility baseline; build the visit-pass catalog (rooftop paused Oct 1–10); "Plan my stay with AI" on confirmation emails | Ari |
 
 ## Calendar Anchor
 

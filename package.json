@@ -4,7 +4,7 @@
     "access": "public"
   },
   "version": "1.1.0",
-  "description": "8 free Claude skills for independent & small-chain hotel teams — one AI seat for every role in your hotel, plus a Vibe Coder to ship the direct-booking site. Built by MSG2AI.",
+  "description": "8 free Claude skills for independent & small-chain hotel teams — one AI seat for every role in your hotel, plus a Vibe Coder to ship the direct-booking site — and the AI Planner: your hotel inside ChatGPT & LLM chats, handing guests to your WhatsApp. Built by MSG2AI.",
   "keywords": [
     "claude",
     "claude-code",
@@ -14,7 +14,11 @@
     "independent-hotel",
     "revenue-management",
     "usali",
-    "claude-skills"
+    "claude-skills",
+    "chatgpt",
+    "llm",
+    "ai-concierge",
+    "whatsapp"
   ],
   "homepage": "https://github.com/msg2ai/hotel-team-skills",
   "repository": {
@@ -40,6 +44,7 @@
     "hotel-housekeeping-rooms/",
     "hotel-sales-marketing/",
     "hotel-vibe-coder/",
+    "hotel-ai-planner/",
     ".claude-plugin/",
     "setup/",
     "docs/",

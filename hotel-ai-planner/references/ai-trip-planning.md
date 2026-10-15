@@ -1,6 +1,6 @@
 # Be the hotel that answers when guests plan with AI
 
-Reference for capability 10 of the Sales & Marketing skill. It covers how a hotel gets its own app inside ChatGPT (and other AI assistants), what the hotel has to prepare, and how guests and partners use it.
+Reference for the AI Planner skill. It covers how a hotel gets its own app inside ChatGPT (and other AI assistants), what the hotel has to prepare, and how guests and partners use it.
 
 ## The thesis, the challenge, the answer
 

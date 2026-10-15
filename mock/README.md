@@ -1,6 +1,6 @@
 # Mock Property — The Meridian Nashville
 
-**The Meridian Nashville** is a fictional 174-key independent lifestyle hotel in downtown Nashville used to showcase what each of the 8 hotel-team skills produces. The leadership personas in `property-portfolio.md` carry across every output — Elena Vasquez (GM), Marcus Bell (Front Office / Rooms), Priya Iyer (Revenue), David Chen (Finance / Controller), Sofia Romano (F&B), Grace Mwangi (Housekeeping / Rooms Division), Tomás Herrera (Sales & Marketing), and Noor Haddad (Web / Vibe Coder).
+**The Meridian Nashville** is a fictional 174-key independent lifestyle hotel in downtown Nashville used to showcase what each of the hotel-team skills (the 8 roles and the AI Planner) produces. The leadership personas in `property-portfolio.md` carry across every output — Elena Vasquez (GM), Marcus Bell (Front Office / Rooms), Priya Iyer (Revenue), David Chen (Finance / Controller), Sofia Romano (F&B), Grace Mwangi (Housekeeping / Rooms Division), Tomás Herrera (Sales & Marketing), Noor Haddad (Web / Vibe Coder), and Ari Navarro (AI Planner).
 
 The hotel: 174 keys across Deluxe, Executive, Corner, Meridian, and Presidential tiers; four F&B outlets (The Ledger restaurant, Loafer's Corner rooftop bar, The Atrium lobby lounge, 24h in-room dining); 12,400 sq ft of meeting space. Opened 2021. FY2026 budget $34.1M total revenue, 39.2% GOP. Channel mix 42% direct / 31% OTA / 18% group.
 
@@ -41,10 +41,14 @@ mock/
     │   ├── 01-rfp-response.md                  ← Tailored RFP response to a corporate group inquiry
     │   ├── 02-marketing-calendar.md            ← Q4 campaign calendar (holiday, corporate, weddings, direct)
     │   └── 03-ota-listing-audit.md             ← Quarterly audit of Booking.com/Expedia listings + actions
-    └── vibe-coder/
-        ├── 01-weddings-landing-page.md         ← Next.js spec + content map for /weddings
-        ├── 02-vercel-deploy-log.md             ← Owner-portal KPI tiles deploy walk-through (Vercel + GitHub)
-        └── 03-booking-engine-integration.md    ← Bookassist deep-link + conversion-tracking plan
+    ├── vibe-coder/
+    │   ├── 01-weddings-landing-page.md         ← Next.js spec + content map for /weddings
+    │   ├── 02-vercel-deploy-log.md             ← Owner-portal KPI tiles deploy walk-through (Vercel + GitHub)
+    │   └── 03-booking-engine-integration.md    ← Bookassist deep-link + conversion-tracking plan
+    └── ai-planner/
+        ├── 01-ai-visibility-audit.md           ← What ChatGPT, Claude, Gemini, Perplexity, Copilot say today (baseline)
+        ├── 02-visit-pass-catalog.md            ← The catalog the hotel's ChatGPT app plans from, verified
+        └── 03-guest-test-and-launch.md         ← Guest-style test run of the app + go-live checklist
 ```
 
 ## Knowledge Base Layout
