@@ -2,6 +2,8 @@
 
 **8 free Claude skills — one for every seat in your independent or small-chain hotel, plus a vibe coder to ship the direct-booking site.**
 
+**New: the AI Planner** — a 9th, guest-facing component that puts your hotel inside ChatGPT and other LLM chats, so guests who plan their stay with AI plan it with *you* and land on your WhatsApp.
+
 Built by [MSG2AI](https://msg2ai.xyz) · AI Ambassador for hotel guests · ActionNotes for leadership meetings
 
 ![Hotel Team Skills — campaign visual](./campaign-visual-hotels.png)
@@ -12,13 +14,17 @@ Built by [MSG2AI](https://msg2ai.xyz) · AI Ambassador for hotel guests · Actio
 
 Every independent and small-chain hotel (50–300 keys) runs on the same 8 roles — a GM, a Director of Rooms, a Revenue Manager, a Controller, an F&B Director, a Housekeeping/Rooms leader, a Director of Sales & Marketing, and (increasingly) someone technical to ship the website. Most of these hotels cover all eight roles with 4–6 people. These Claude skills give each role its own AI counterpart — trained on what that role actually does in a hotel, wired into the systems you already use (your PMS, RMS, channel manager, POS, Gmail, Google Drive), and fluent in the language of hotel economics (ADR, RevPAR, GOPPAR, TRevPAR, flow-through, USALI).
 
-Install one skill or all eight. Each is self-contained. They share one **knowledge base** and one **property JSON** so they work together without you coordinating them.
+The 9th skill, the **AI Planner**, faces the other way: toward guests planning their stay in ChatGPT and other LLM chats.
+
+Install one skill or all nine. Each is self-contained. They share one **knowledge base** and one **property JSON** so they work together without you coordinating them.
 
 > **New here?** Skim [`mock/`](./mock/) for a fully worked example — a fictional 174-key Nashville hotel with 3 sample outputs per skill.
 
 ---
 
-## The 8 Skills
+## The Skills
+
+### Your back office: 8 role skills
 
 | Skill | Role | Persona | Key Capabilities |
 |---|---|---|---|
@@ -30,6 +36,62 @@ Install one skill or all eight. Each is self-contained. They share one **knowled
 | [`hotel-housekeeping-rooms`](./hotel-housekeeping-rooms/) | Director of Housekeeping / Rooms Division | **Grace** | Daily turnover sheet, inspection rubric, linen/supply pars, deep-clean rotation, work orders, PM calendar |
 | [`hotel-sales-marketing`](./hotel-sales-marketing/) | Director of Sales & Marketing | **Tomás** | Group pipeline, RFP responses, marketing calendar, direct-booking strategy, OTA listing optimization, PR |
 | [`hotel-vibe-coder`](./hotel-vibe-coder/) | Director of Digital / Vibe Coder | **Noor** | Hotel website, per-package landing pages, booking-engine integration, owner portal, press kit — ships to Vercel |
+
+---
+
+### Your front door in ChatGPT & LLM chats: the AI Planner
+
+| Skill | Role | Persona | Key Capabilities |
+|---|---|---|---|
+| [`hotel-ai-planner`](./hotel-ai-planner/) | AI Planner / AI guest channel | **Ari** | AI visibility audit, the hotel's ChatGPT app, plan link + **Book direct**, catalog with an open-now check, WhatsApp hand-off, ChatGPT directory prep, monthly AI-channel report |
+
+**Is the future of travel planning going to be on ChatGPT and similar LLMs?** Guests already ask an assistant to "plan my stay", "what's near the hotel" and "where should we eat". **None of that activity reaches the hotel**, and Booking.com and Expedia already have their own apps inside ChatGPT. A single hotel won't win "find me a hotel in X", but it can win **"plan my stay at [hotel]"**.
+
+**How the AI Planner brings it back to you.** It sets up and runs your hotel's own app in ChatGPT, the msg2ai Visit Pass. The app does four things:
+- plans the stay from your own outlets and vetted places nearby;
+- offers **Book direct** on your own booking engine, with the guest's dates filled in;
+- hands the guest to your **WhatsApp concierge**, with their opt-in;
+- says plainly when your information doesn't cover a question, and gives your contact instead of answering from the web.
+
+No phone number or booking reference ever passes through the assistant.
+
+```
+Guest in ChatGPT / Claude / any LLM chat
+   "Plan 3 days at [your hotel] for a family of four"
+        │  your app plans from YOUR catalog (read-only)
+        ▼
+   Plan card ── Book direct (your engine, dates filled) ── Continue on WhatsApp
+                                                             │  guest sends the code = opt-in
+                                                             ▼
+                                   Your WhatsApp concierge: welcome, plan, cards, the whole stay
+```
+
+**Ways in:**
+- the hotel's own app in ChatGPT;
+- the **Plan my stay with AI** link on your site, in emails and on QR codes, which works from any AI assistant or browser with no install;
+- a Claude custom connector;
+- a group app or a tourism bureau's "Where to stay" listing.
+
+**What the AI Planner does, in order:**
+1. **Audits** what the assistants say about you today.
+2. **Builds the catalog** your app plans from, in `10-msg2ai-export/visit-pass/`, and verifies that every place is open now.
+3. **Briefs the team:**
+   - Noor (Vibe Coder) on the plan link and button;
+   - Marcus (Front Office) on the WhatsApp hand-off;
+   - Sofia (F&B) on the restaurant list;
+   - Tomás (Sales & Marketing) on campaigns.
+4. **Tests** the app like a guest.
+5. **Reports** the AI channel monthly: plans, WhatsApp hand-offs, book-direct taps, questions not covered, and the visibility score.
+
+Formats, checklists and install steps: [`hotel-ai-planner/references/ai-trip-planning.md`](./hotel-ai-planner/references/ai-trip-planning.md). A worked example for The Meridian Nashville is in [`mock/outputs/ai-planner/`](./mock/outputs/ai-planner/).
+
+**Going live with msg2ai:**
+1. Discovery call
+2. Scope definition
+3. Prototype + knowledge base
+4. Roll-out
+
+Contact bart@msg2.ai.
 
 ---
 
@@ -55,7 +117,8 @@ hotel-knowledge-base/
 ├── 07-fnb/                   ← outlets, BEOs, menu engineering, beverage, banquet
 ├── 08-finance-accounting/    ← USALI chart of accounts, DRA, AR/AP, payroll
 ├── 09-guests/                ← segments, loyalty, profiles, complaints, NPS, reviews
-└── 10-msg2ai-export/         ← merged property.json for hello.msg2ai.xyz
+└── 10-msg2ai-export/         ← files for msg2ai: property.json (hello.msg2ai.xyz)
+                                 + visit-pass/ (catalog behind your ChatGPT app & WhatsApp concierge)
 ```
 
 ### Bootstrap from your hotel website (Firecrawl)
@@ -88,7 +151,7 @@ npx hotel-team-skills install
 The installer clones the skills into `~/.claude/skills/hotel-team-skills/` and they're immediately available in Claude Code.
 
 ```bash
-npx hotel-team-skills list        # See all 8 skills
+npx hotel-team-skills list        # See all 9 skills (8 roles + the AI Planner)
 npx hotel-team-skills update      # Update to the latest version
 npx hotel-team-skills uninstall   # Remove the skills
 ```
@@ -178,6 +241,8 @@ You can also connect these directly in **Claude.ai**: go to **Settings → Conne
 | "Schedule today's turnovers — flag same-day-flip risk" | Housekeeping & Rooms | Today's turnover sheet with RA credits assigned and risk-flagged rooms |
 | "Respond to this corporate group RFP" | Sales & Marketing | A tailored 48-hour RFP response with availability, rate logic, F&B options |
 | "Ship the /weddings landing page to Vercel" | Vibe Coder | A live Vercel preview URL with package content, gallery, and planner CTA |
+| "What does ChatGPT say when a family asks to plan 3 days at our hotel?" | AI Planner | An AI visibility audit: per assistant and prompt, whether you appear, what's wrong, where guests get sent |
+| "Build the catalog for our ChatGPT app" | AI Planner | `visit-pass/` files (hotel, experiences, restaurants, info card), each place verified open now, with links checked |
 
 **Skills also work together.** When you ask the GM for the monthly asset-manager briefing, it pulls pace from Revenue, sales pipeline from Sales, ops health from Rooms / F&B / Housekeeping, and the financial flash from the Controller — you don't coordinate, they share the knowledge base and the property JSON.
 
@@ -197,7 +262,7 @@ hotel-team-skills/
 ├── mock/                                    ← worked example: The Meridian Nashville (174 keys)
 │   ├── property-portfolio.md
 │   ├── README.md
-│   └── outputs/                             ← 3 sample artifacts per skill (24 total)
+│   └── outputs/                             ← 3 sample artifacts per skill (27 total)
 ├── hotel-general-manager/SKILL.md
 ├── hotel-front-office/SKILL.md
 ├── hotel-revenue-management/SKILL.md
@@ -205,7 +270,10 @@ hotel-team-skills/
 ├── hotel-food-beverage/SKILL.md
 ├── hotel-housekeeping-rooms/SKILL.md
 ├── hotel-sales-marketing/SKILL.md
-└── hotel-vibe-coder/SKILL.md
+├── hotel-vibe-coder/SKILL.md
+└── hotel-ai-planner/                        ← the guest-facing component: ChatGPT & LLM chats
+    ├── SKILL.md
+    └── references/ai-trip-planning.md
 ```
 
 ---
