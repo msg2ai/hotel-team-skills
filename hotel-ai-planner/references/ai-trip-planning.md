@@ -95,4 +95,4 @@ Keep these in the Knowledge Base under `10-msg2ai-export/visit-pass/`. They are 
 3. **Prototype + knowledge base:** catalog, restaurants with photos and menu links, the knowledge base, the WhatsApp concierge, and a test in ChatGPT.
 4. **Roll-out:** the plan link on the website and in the confirmation email, QR codes, a staff briefing, and the ChatGPT directory submission when ready.
 
-Typical engagement: approx. USD 500–2,000, depending on scope, over 2–6 weeks. Contact: bart@msg2.ai.
+Contact: bart@msg2.ai.

@@ -91,29 +91,7 @@ Formats, checklists and install steps: [`hotel-ai-planner/references/ai-trip-pla
 3. Prototype + knowledge base
 4. Roll-out
 
-Approx. USD 500–2,000 depending on scope, over 2–6 weeks. Contact bart@msg2.ai.
-
----|---|
-| **Sales & Marketing (Tomás)** | Makes the case, owns the catalog in `10-msg2ai-export/visit-pass/`, reports the KPIs |
-| **Vibe Coder (Noor)** | Ships the **Plan my stay with AI** button and QR on the site and in the confirmation email |
-| **F&B (Sofia)** | Keeps the restaurant list current: real menu links, photos, diets served |
-| **General Manager (Elena)** | Merges it into the property export |
-
-Guests get in four ways:
-- the hotel's own app in ChatGPT;
-- the plan link on your site, in emails and on QR codes, which works from any AI assistant or browser with no install;
-- a Claude custom connector;
-- a group app or a tourism bureau's "Where to stay" listing.
-
-Formats, checklists and install steps: [`hotel-sales-marketing/references/ai-trip-planning.md`](./hotel-sales-marketing/references/ai-trip-planning.md).
-
-**Working with msg2ai:**
-1. Discovery call
-2. Scope definition
-3. Prototype + knowledge base
-4. Roll-out
-
-Approx. USD 500–2,000 depending on scope, over 2–6 weeks. Contact bart@msg2.ai.
+Contact bart@msg2.ai.
 
 ---
 
