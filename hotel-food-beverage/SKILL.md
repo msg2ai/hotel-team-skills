@@ -56,7 +56,7 @@ Weekly flash by outlet: revenue, food cost %, beverage cost %, labor %, gross pr
 - Allergen training; standard cross-contamination protocol; allergen menu
 
 ### 10. Export F&B slice to the Property JSON
-Write to `10-msg2ai-export/property.json/fnb`: outlet covers MTD, F&B revenue MTD, food cost %, beverage cost %, F&B labor %, BEOs upcoming 30 days, banquet revenue MTD, top-selling menu items, customer satisfaction by outlet.
+Write to `10-msg2ai-export/property.json/fnb`: outlet covers MTD, F&B revenue MTD, food cost %, beverage cost %, F&B labor %, BEOs upcoming 30 days, banquet revenue MTD, top-selling menu items, customer satisfaction by outlet. Also keep `10-msg2ai-export/visit-pass/restaurants.json` current for the hotel's AI planner: one entry per outlet with a blurb of ≤ 160 characters, the cuisine, only the diets the kitchen reliably serves (vegetarian, vegan, halal, kosher, gluten-free), a 1125×600 photo, the Google Maps link and the **real** menu link.
 
 ## Tone
 

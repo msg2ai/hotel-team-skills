@@ -1,6 +1,6 @@
 ---
 name: hotel-vibe-coder
-description: Acts as an AI Vibe Coder / Director of Digital for an independent or small-chain hotel — the only technical role on the AI team. Use whenever someone wants to ship the hotel website, build per-property landing pages, integrate a booking engine, build an owner / corporate portal, build a press kit page, or wire up a campaign microsite. Triggers on phrases like "ship the hotel website", "build a microsite for the wedding package", "spin up a corporate portal", "press kit page", "career site", "loyalty signup page", "booking engine integration", "metasearch landing page", "Vercel deploy", "Next.js", "merge property JSON to brand.com", or any web / digital build request.
+description: Acts as an AI Vibe Coder / Director of Digital for an independent or small-chain hotel — the only technical role on the AI team. Use whenever someone wants to ship the hotel website, build per-property landing pages, integrate a booking engine, build an owner / corporate portal, build a press kit page, or wire up a campaign microsite. Triggers on phrases like "ship the hotel website", "build a microsite for the wedding package", "spin up a corporate portal", "press kit page", "career site", "loyalty signup page", "booking engine integration", "metasearch landing page", "Vercel deploy", "Next.js", "merge property JSON to brand.com", "plan my stay with AI button", "plan link", "ChatGPT app link on the website", or any web / digital build request.
 ---
 
 # Hotel Vibe Coder
@@ -65,13 +65,22 @@ Default to a **content layer** that reads from `10-msg2ai-export/property.json` 
 ### 9. SEO + analytics
 Per-page metadata, canonicals, sitemap.xml, robots.txt, structured data (Hotel, LocalBusiness, FAQPage, BreadcrumbList). GA4 wired through env (`NEXT_PUBLIC_GA_MEASUREMENT_ID`). Optional Plausible. Submit to Google Search Console + Bing.
 
-### 10. Export Web slice to the Property JSON
+### 10. "Plan my stay with AI": the plan link on the site and in the confirmation email
+Give every guest a no-install way into the hotel's AI planner and WhatsApp concierge: the plan link msg2ai provides for the hotel, in the form `https://<msg2ai-host>/api/public/visit/<hotel>/start?from=YYYY-MM-DD&to=YYYY-MM-DD&party=N`.
+- **Website:** a **Plan my stay with AI** button on `/` and on `/rooms/[slug]`, filled with the dates the guest picked in the booking widget when they are known. The link previews the plan; one tap opens WhatsApp. It works from any browser or AI assistant.
+- **Confirmation email and pre-arrival email:** the same link with the booking's dates and party, plus a QR code for print (front desk, room card, signage).
+- **Never** put a name, email, phone number, notes or booking reference in the link. Links are shared and logged. Only dates, party size, interests, language and dietary needs.
+- **Book direct:** keep the booking-engine deep-link pattern (`{arrival}`, `{departure}`, `{adults}`) stable and https. Sales & Marketing gives it to msg2ai so the hotel's ChatGPT app can offer **Book direct** with the dates filled in.
+- Tag every plan-link and book-direct link with UTMs (`utm_source=ai_planner`) so GA4 attributes the direct bookings.
+
+### 11. Export Web slice to the Property JSON
 Write to `10-msg2ai-export/property.json/web`:
 - `primary_domain`, `booking_engine_url`, `metasearch_landing_urls[]`
 - Per-page slugs and last-updated timestamps
 - Lighthouse scores (performance, accessibility, SEO) per route
 - GA4 / Plausible IDs (no secrets)
 - GitHub repo URL, Vercel project ID, latest deployment URL
+- `plan_link_url` and the `booking_engine_url_pattern` with `{arrival}` `{departure}` `{adults}`
 
 ## Tone
 

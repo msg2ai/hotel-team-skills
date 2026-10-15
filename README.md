@@ -33,6 +33,43 @@ Install one skill or all eight. Each is self-contained. They share one **knowled
 
 ---
 
+## New: be the hotel that answers when guests plan with AI
+
+**Is the future of travel planning going to be on ChatGPT or similar assistants?** Guests already ask an assistant to "plan my stay", "what's near the hotel" and "where should we eat". **None of that activity reaches the hotel**, and Booking.com and Expedia already have their own apps inside ChatGPT.
+
+**How do you bring it back to your hotel?** With your hotel's own app in ChatGPT, the msg2ai Visit Pass. It does four things:
+- plans the stay from your own outlets and vetted places nearby;
+- offers **Book direct** on your own booking engine, with the guest's dates filled in;
+- hands the guest to your **WhatsApp concierge**, with their opt-in;
+- says plainly when your information doesn't cover a question, and gives your contact instead of answering from the web.
+
+No phone number or booking reference ever passes through the assistant.
+
+| Skill | Role in it |
+|---|---|
+| **Sales & Marketing (Tomás)** | Makes the case, owns the catalog in `10-msg2ai-export/visit-pass/`, reports the KPIs |
+| **Vibe Coder (Noor)** | Ships the **Plan my stay with AI** button and QR on the site and in the confirmation email |
+| **F&B (Sofia)** | Keeps the restaurant list current: real menu links, photos, diets served |
+| **General Manager (Elena)** | Merges it into the property export |
+
+Guests get in four ways:
+- the hotel's own app in ChatGPT;
+- the plan link on your site, in emails and on QR codes, which works from any AI assistant or browser with no install;
+- a Claude custom connector;
+- a group app or a tourism bureau's "Where to stay" listing.
+
+Formats, checklists and install steps: [`hotel-sales-marketing/references/ai-trip-planning.md`](./hotel-sales-marketing/references/ai-trip-planning.md).
+
+**Working with msg2ai:**
+1. Discovery call
+2. Scope definition
+3. Prototype + knowledge base
+4. Roll-out
+
+Approx. USD 500–2,000 depending on scope, over 2–6 weeks. Contact bart@msg2.ai.
+
+---
+
 ## First step for every skill: a shared Knowledge Base
 
 Every skill reads from — and writes to — one **shared Knowledge Base** for your property. Set this up first. It can live anywhere your team already keeps documents:
@@ -55,7 +92,7 @@ hotel-knowledge-base/
 ├── 07-fnb/                   ← outlets, BEOs, menu engineering, beverage, banquet
 ├── 08-finance-accounting/    ← USALI chart of accounts, DRA, AR/AP, payroll
 ├── 09-guests/                ← segments, loyalty, profiles, complaints, NPS, reviews
-└── 10-msg2ai-export/         ← merged property.json for hello.msg2ai.xyz
+└── 10-msg2ai-export/         ← merged property.json for hello.msg2ai.xyz + visit-pass/ (AI planner catalog)
 ```
 
 ### Bootstrap from your hotel website (Firecrawl)
