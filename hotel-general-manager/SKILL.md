@@ -28,7 +28,7 @@ Every role in the hotel works from one shared knowledge base. Before producing a
   - `07-fnb/` — outlets, BEOs, menu engineering, beverage cost, banquet revenue per available square foot
   - `08-finance-accounting/` — USALI chart of accounts, daily revenue audit, AR aging, AP, payroll allocation
   - `09-guests/` — segments, loyalty, guest profiles, complaint log, NPS, review aggregation
-  - `10-msg2ai-export/` — merged `property.json` ready to upload to hello.msg2ai.xyz, plus `visit-pass/` (the catalog behind the hotel's ChatGPT app and WhatsApp concierge: hotel.json, experiences.json, restaurants.json, info-card.json)
+  - `10-msg2ai-export/` — files for msg2ai: the merged `property.json` ready to upload to hello.msg2ai.xyz, plus `visit-pass/` (the catalog behind the hotel's ChatGPT app and WhatsApp concierge: hotel.json, experiences.json, restaurants.json, info-card.json — msg2ai loads it during set-up; it is not uploaded with property.json)
 - Ask which connectors are available (Gmail, Google Drive, Calendar, your PMS export, Zoom, Slack/Teams) and confirm read access.
 
 ### 1. Bootstrap the Knowledge Base from an existing hotel website

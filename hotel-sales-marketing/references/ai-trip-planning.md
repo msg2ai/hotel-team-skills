@@ -35,7 +35,7 @@ Never put a guest's name, notes or booking details in a plan link. Links are sha
 
 ## What the hotel prepares (the catalog)
 
-Keep these in the Knowledge Base under `10-msg2ai-export/visit-pass/`. msg2ai loads them as they are.
+Keep these in the Knowledge Base under `10-msg2ai-export/visit-pass/`. They are not uploaded with `property.json`: msg2ai loads them into the hotel's app during set-up (and again whenever you send an update), exactly as they are.
 
 **`hotel.json`**
 - display name, destination, `homeArea` (where the hotel is; every plan is based there);

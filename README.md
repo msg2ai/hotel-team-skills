@@ -92,7 +92,8 @@ hotel-knowledge-base/
 ├── 07-fnb/                   ← outlets, BEOs, menu engineering, beverage, banquet
 ├── 08-finance-accounting/    ← USALI chart of accounts, DRA, AR/AP, payroll
 ├── 09-guests/                ← segments, loyalty, profiles, complaints, NPS, reviews
-└── 10-msg2ai-export/         ← merged property.json for hello.msg2ai.xyz + visit-pass/ (AI planner catalog)
+└── 10-msg2ai-export/         ← files for msg2ai: property.json (hello.msg2ai.xyz)
+                                 + visit-pass/ (catalog behind your ChatGPT app & WhatsApp concierge)
 ```
 
 ### Bootstrap from your hotel website (Firecrawl)
